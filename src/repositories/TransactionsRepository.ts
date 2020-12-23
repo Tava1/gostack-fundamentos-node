@@ -56,7 +56,7 @@ class TransactionsRepository {
     const { total } = this.getBalance();
 
     if (type === 'outcome' && value > total) {
-      throw Error('shhh');
+      throw Error('Transaction is not valid');
     }
 
     this.transactions.push(transaction);
